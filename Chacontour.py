@@ -20,11 +20,11 @@ janela_edicao = None
 janela_cliente_encontrado = None
 
 scope = ['https://www.googleapis.com/auth/drive']
-credentials = ServiceAccountCredentials.from_json_keyfile_name( os.path.join(os.path.dirname(__file__), 'chacontour-app-2a5d0d2aa5b0.json')
+credentials = ServiceAccountCredentials.from_json_keyfile_name( os.path.join(os.path.dirname(__file__), 'arquivo.json')
  , scope)
 service = build('drive', 'v3', credentials=credentials)
 
-file_id = '1NrZIPtEzo-Vw-UQSfwqHHnx257EfMAAS'
+file_id = 'file id'
 
 def download_file_content(file_id):
     request = service.files().get_media(fileId=file_id)
